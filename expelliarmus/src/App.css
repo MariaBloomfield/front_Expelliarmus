@@ -10,6 +10,8 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  height: 200px;
+  width: 800px;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -39,4 +41,42 @@
 
 .read-the-docs {
   color: #888;
+}
+
+h1 {
+    text-align: center;
+    color: #f6f6f6;
+}
+
+h4 {
+    text-align: center;
+    color:#f6f6f6;
+}
+
+.logo-img {
+    position:absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    display: block;
+    height: 500px;
+    width: 1000px;
+}
+
+.main-div {
+    display: flex;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 500px;
+    width: 1000px;
+}
+
+
+body {
+    background-color: #501f52;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px;
 }
