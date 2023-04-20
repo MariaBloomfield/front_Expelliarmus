@@ -18,6 +18,12 @@ img {
   display: block;
   max-width: 100%;
 }
+.container {
+  display: flex;
+  align-items: center;
+  padding: 25px 60px 50px 60px;
+}
+
 @media only screen and (max-width: 600px) {
   .two-column, .two-column div {
     flex-direction:column;

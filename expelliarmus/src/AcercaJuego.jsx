@@ -32,14 +32,14 @@ export default function AcercaJuego() {
         </tr>
         <tr>
             <td>1</td>
-            <td> <img class="image-cell" src="src/assets/imgs/harry.png" alt="" title="Harry"/></td>
+            <td> <img class="image-cell" src="src/assets/imgs/harry.jpeg" alt="" title="Harry"/></td>
             <td>Maria Anders</td>
             <td>Griffindor</td>
             <td>1057</td>
         </tr>
         <tr>
             <td>2</td>
-            <td> <img class="image-cell" src="src/assets/imgs/dumbledore.jpeg" alt="" title="Harry"/></td>
+            <td> <img class="image-cell" src="src/assets/imgs/cedric.jpeg" alt="" title="Harry"/></td>
             <td>Christina Berglund</td>
             <td>Hufflepuff</td>
             <td>934</td>
@@ -60,9 +60,9 @@ export default function AcercaJuego() {
         </tr>
         <tr>
             <td>5</td>
-            <td> <img class="image-cell" src="src/assets/imgs/dobby.jpeg" alt="" title="Harry"/></td>
+            <td> <img class="image-cell" src="src/assets/imgs/hermaione.jpeg" alt="" title="Harry"/></td>
             <td>Helen Bennett</td>
-            <td>Hufflepuff</td>
+            <td>Griffindor</td>
             <td>779</td>
         </tr>
         </table>
