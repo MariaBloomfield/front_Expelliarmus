@@ -33,7 +33,7 @@ h2 {
 }
 
 #customers td, #customers th {
-  border: 1px solid #f2f2f2;
+  border: 1px solid #032f40;
   padding: 8px;
 }
 
@@ -47,7 +47,7 @@ h2 {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #04849C;
+  background-color: #0fc9f1;
   color: black;
 }
 
@@ -55,5 +55,5 @@ h2 {
   width: 100px;
   height: 100px;
   text-align: center;
-  padding: 5px;
+  padding-bottom: 15px;
 }

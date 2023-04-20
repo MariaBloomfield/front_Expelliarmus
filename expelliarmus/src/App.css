@@ -6,7 +6,7 @@
 }
 
 .logo {
-  /* height: 6em; */
+  height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
@@ -40,7 +40,7 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #bfbfbf;
 }
 
 h1 {
@@ -58,8 +58,7 @@ h4 {
     margin-top: 15px;
     margin-left: 10px;
     display: block;
-    height: 500px;
-    width: 1000px;
+    max-width: 400px;
 }
 
 .main-div {
@@ -72,11 +71,4 @@ img {
     margin-top: 20px;
     height: 500px;
     width: 1000px;
-}
-
-
-body {
-    background-color: #501f52;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 20px;
 }
