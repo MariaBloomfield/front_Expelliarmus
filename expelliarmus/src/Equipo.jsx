@@ -2,6 +2,14 @@ import './Equipo.css'
 export default function Equipo() {
     return (
         <>
+        <header>
+        <div>
+          <a href="/acerca" target="_blank">
+            <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
+          </a> 
+        </div>
+        </header>
+        <br></br>
         <h1 class="page-heading"> Equipo: Las Motomamis</h1>
         <section class="two-column">
             <div>
@@ -23,7 +31,7 @@ export default function Equipo() {
             </div>
         </section>
         <div class="container">
-            <img src="src/assets/imgs/equipo/nosotras.jpeg" alt="" />
+            <img class="img2"src="src/assets/imgs/equipo/nosotras.jpeg" alt="" />
             <div>
                 <h1>¿Quiénes somos?</h1>
                 <p class="description">

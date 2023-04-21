@@ -2,7 +2,20 @@ import './Partida.css'
 export default function Partida() {
     return (
         <>
-        <h2>Simulación de una jugada</h2>
+        <header>
+        <div>
+          <a href="/acerca" target="_blank">
+            <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
+          </a> 
+        </div>
+        </header>
+        <br></br>
+        <h1>Simulación de una jugada</h1>
+        <p>A continuación, es posible observar una breve simulación de una partida. En este caso el jugador perteneciente a la casa Griffindor
+            es decir, el de color rojo, es el que está jugando. En la imagen se puede observar que el jugador tiene 7 fichas en su poder. Durante 
+            la jugada, este comienza por atacar a jugador de Ravenclaw, moviendo uno de sus magos hacia ese territorio. Luego ataca a un jugador 
+            de Hufflepuff y termina moviendo 2 de sus magos a ese nuevo territorio, con el fin de poder atacar a los territorios cercanos a este.
+        </p>
         <div class="image-container">
             <img class="image1" src="src/assets/imgs/tablero.png" />
             <img class="image2" src="src/assets/imgs/fichas/roja.png" />
@@ -27,10 +40,37 @@ export default function Partida() {
             <img class="image21" src="src/assets/imgs/fichas/roja.png" />
             <img class="image22" src="src/assets/imgs/fichas/azul.png" />
         </div>
-        <div className="dado-container">
-            <img className="dado-img" src="src/assets/imgs/dado/uno.png" alt="" />
+        <div className="contenedor">
+            <div className="dados">
+                <div className="dado-container">
+                    <h4>Atacante:</h4>
+                    <div>
+                        <img className="dado-img" src="src/assets/imgs/dado/uno.png" alt="" />
+                        <img className="dado-img" src="src/assets/imgs/dado/cinco.png" alt="" />
+                    </div>
+                    
+                </div>
+
+                <div className="dado-container">
+                    <h4>Defensor:</h4>
+                    <div>
+                        <img className="dado-img" src="src/assets/imgs/dado/tres.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div>
+                    <img class="hogwarts" src="src/assets/imgs/lugares/pic2.jpeg" alt="Avatar"/>
+                    <h4><b>Hogwarts</b></h4>
+                </div>
+                
+                <div class="container">
+                    <p>Tu objetivo es conquistar todos los territorios pertenecientes a Hogwarts</p>
+                </div>
+            </div> 
         </div>
-        <br />
+        
         <p className="read-the-docs">
             Página hecha por el equipo Las Motomamis
         </p>

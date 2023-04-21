@@ -17,10 +17,20 @@ img {
   display: block;
   max-width: 90%;
 }
+
 .container {
   display: flex;
   align-items: center;
   padding: 25px 60px 50px 60px;
+  font-size: 100%;
+}
+
+
+.img2 {
+  display: block;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (max-width: 600px) {
@@ -51,4 +61,5 @@ p {
     margin-right: 3%;
     margin-left: 3%;
     display: block;
+    font-size: 100%;
 }

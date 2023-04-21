@@ -17,12 +17,13 @@ function App() {
         </div>
       </header>
       <br /><br />
-      <div>
-        <h4>Ataca y conquista las diferentes ubicaciones del mundo mágico de Harry Potter, en donde podras enfrentarte con 
-        magos y brujas de las diferentes casas de Hogwarts e incluso muggles. </h4>
-      </div>
+      <h1>EXPELLIARMUS</h1>
       <div class="main-div">
         <img src="src/assets/imgs/tres.jpeg" alt="" title="Harry"/>
+      </div>
+      <div>
+        <h4>Ataca y conquista las diferentes ubicaciones del mundo mágico de Harry Potter, en donde podrás enfrentarte con 
+        magos y brujas de las diferentes casas de Hogwarts e incluso muggles. </h4>
       </div>
       <p className="read-the-docs">
         Página hecha por el equipo Las Motomamis

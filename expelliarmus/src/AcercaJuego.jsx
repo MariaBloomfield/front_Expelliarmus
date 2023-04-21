@@ -2,8 +2,16 @@ import './AcercaJuego.css'
 export default function AcercaJuego() {
     return(
         <>
+        <header>
         <div>
-            <h2>¿Qué es Expelliarmus?</h2>
+          <a href="/acerca" target="_blank">
+            <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
+          </a> 
+        </div>
+        </header>
+        <br></br>
+        <div>
+            <h1>¿Qué es Expelliarmus?</h1>
         </div>
 
         <div class="main-div">
@@ -13,8 +21,8 @@ export default function AcercaJuego() {
                 de Slytherin, etc. El jugador que complete su objetivo primero será el ganador de la partida.
             </p>
             <p class="description">
-                En esta página podras jugar Expelliarmus, un juego de mesa basado en el mundo mágico de Harry Potter. En donde para lograr tu
-                objetivo deberás atacar y conquistar las diferentes ubicaciones que estén dentro de la categoria de tu objetivo, por ejemplo
+                En esta página podrás jugar Expelliarmus, un juego de mesa basado en el mundo mágico de Harry Potter. En donde para lograr tu
+                objetivo deberás atacar y conquistar las diferentes ubicaciones que estén dentro de la categoría de tu objetivo, por ejemplo
                 que pertenezcan a Hogwarts. Para esto deberás enfrentarte con magos y muggles quienes serán tus contrincantes.
             </p>
         </div>

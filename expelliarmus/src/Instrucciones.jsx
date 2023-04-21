@@ -3,6 +3,13 @@ import CambiarTexto from './CambiarTexto'
 export default function Instrucciones() {
     return (
         <>
+        <header>
+        <div>
+          <a href="/acerca" target="_blank">
+            <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
+          </a> 
+        </div>
+        </header>
         <div class="container">
             <div id="cf">
                 <img class="primera" src="src/assets/imgs/lugares/pic1.jpeg" />
@@ -10,8 +17,12 @@ export default function Instrucciones() {
                 <img class="tercera" src="src/assets/imgs/lugares/pic3.jpeg" />
 
             </div>
-        <CambiarTexto />
+            <div>
+                <h1>Instrucciones</h1>
+                <CambiarTexto />
+            </div>
         </div>
+        <br></br>
         <p className="read-the-docs">
             Página hecha por el equipo Las Motomamis
         </p>
