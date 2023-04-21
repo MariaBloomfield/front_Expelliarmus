@@ -8,6 +8,7 @@ export default function NavBar() {
             <a href="/equipo">Equipo</a>
             <a href="/instrucciones">Instrucciones</a>
             <a href="/partida">Partida</a>
+            <img class="logo" src="src/assets/imgs/logo.png" alt="Logo de la página" />
         </div>
         </>
     )

@@ -1,0 +1,12 @@
+.description {
+    color: #f6f6f6;
+    text-align: justify;
+    margin-right: 3%;
+    margin-left: 3%;
+    display: block;
+}
+button {
+  position: absolute;
+  top: 520px;
+  left: 1000px;
+}

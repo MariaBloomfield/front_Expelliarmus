@@ -14,9 +14,9 @@ function App() {
           <a href="/acerca" target="_blank">
             <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
           </a> 
-          {/* <img class="logo-img" src="src/assets/imgs/logo.jpeg" alt="buena" title="logo" /> */}
         </div>
       </header>
+      <br /><br />
       <div>
         <h4>Ataca y conquista las diferentes ubicaciones del mundo mágico de Harry Potter, en donde podras enfrentarte con 
         magos y brujas de las diferentes casas de Hogwarts e incluso muggles. </h4>

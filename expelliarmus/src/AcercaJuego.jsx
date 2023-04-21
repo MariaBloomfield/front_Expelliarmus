@@ -2,10 +2,6 @@ import './AcercaJuego.css'
 export default function AcercaJuego() {
     return(
         <>
-        <div id="content">
-                <img src="src/assets/imgs/logo.png" class="ribbon" alt="" />
-            <div>some text...</div>
-        </div>
         <div>
             <h2>¿Qué es Expelliarmus?</h2>
         </div>

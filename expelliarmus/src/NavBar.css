@@ -20,6 +20,15 @@
 }
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #0fc9f1;
-    color: black;
-  }
+  background-color: #0fc9f1;
+  color: black;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 14px 16px;
+  height: 100px;
+  width: auto;
+}
