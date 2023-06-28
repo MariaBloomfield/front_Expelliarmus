@@ -1,79 +1,106 @@
-import './Partida.css'
-export default function Partida() {
+// import './Partida.css'
+// import Dados from './Dados';
+// import Ejercitos from './Ejercitos';
+// export default function Partida() {
+//     return (
+//         <>
+//         <header>
+//         <div>
+//           <a href="/acerca" target="_blank">
+//             <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
+//           </a> 
+//         </div>
+//         </header>
+//         <br></br>
+//         <h1>Simulación de una jugada</h1>
+//         <h2>Partida X987A14</h2>
+
+//         <div class="parent">
+//             <div class="div1"> <div class="image-container"> 
+//                 <img class="image1" src="src/assets/imgs/tablero.png" /> 
+//                 <Ejercitos />
+//             </div></div>
+//             <div class="div2"> 
+//                 <p>Tu objetivo es conquistar todos los territorios del mundo de Harry Potter</p><br></br>
+//                 <h4>Territorios conquistados: 5</h4>
+//             </div>
+//             <div class="div3"> <div className="dado-container">
+//                 <Dados />
+//             </div></div>
+//         </div>
+
+//         <p className="read-the-docs">
+//             Página hecha por el equipo Las Motomamis
+//         </p>
+//         </>
+//     )
+// }
+
+
+import React from 'react';
+import Modal from 'react-modal';
+import './Partida.css';
+import Dados from './Dados';
+import Ejercitos from './Ejercitos';
+
+export default function Partida({ territorio, winner, loser, territories }) {
+    const [showWinnerModal, setShowWinnerModal] = React.useState(false);
+
+    // Función para abrir el modal del ganador
+    const showWinnerDialog = () => {
+        setShowWinnerModal(true);
+    };
+
+    React.useEffect(() => {
+        if (winner !== false) {
+            showWinnerDialog();
+        }
+    }, [winner]);
+
     return (
         <>
-        <header>
-        <div>
-          <a href="/acerca" target="_blank">
-            <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
-          </a> 
-        </div>
-        </header>
-        <br></br>
-        <h1>Simulación de una jugada</h1>
-        <p>A continuación, es posible observar una breve simulación de una partida. En este caso el jugador perteneciente a la casa Griffindor
-            es decir, el de color rojo, es el que está jugando. En la imagen se puede observar que el jugador tiene 7 fichas en su poder. Durante 
-            la jugada, este comienza por atacar a jugador de Ravenclaw, moviendo uno de sus magos hacia ese territorio. Luego ataca a un jugador 
-            de Hufflepuff y termina moviendo 2 de sus magos a ese nuevo territorio, con el fin de poder atacar a los territorios cercanos a este.
-        </p>
-        <div class="image-container">
-            <img class="image1" src="src/assets/imgs/tablero.png" />
-            <img class="image2" src="src/assets/imgs/fichas/roja.png" />
-            <img class="image3" src="src/assets/imgs/fichas/roja.png" />
-            <img class="image4" src="src/assets/imgs/fichas/roja.png" />
-            <img class="image5" src="src/assets/imgs/fichas/roja.png" />
-            <img class="image6" src="src/assets/imgs/fichas/roja.png" />
-            <img class="image7" src="src/assets/imgs/fichas/roja.png" />
-            <img class="image8" src="src/assets/imgs/fichas/amarilla.png" />
-            <img class="image9" src="src/assets/imgs/fichas/amarilla.png" />
-            <img class="image10" src="src/assets/imgs/fichas/amarilla.png" />
-            <img class="image11" src="src/assets/imgs/fichas/amarilla.png" />
-            <img class="image12" src="src/assets/imgs/fichas/amarilla.png" />
-            <img class="image13" src="src/assets/imgs/fichas/azul.png" />
-            <img class="image14" src="src/assets/imgs/fichas/azul.png" />
-            <img class="image15" src="src/assets/imgs/fichas/azul.png" />
-            <img class="image16" src="src/assets/imgs/fichas/gris.png" />
-            <img class="image17" src="src/assets/imgs/fichas/gris.png" />
-            <img class="image18" src="src/assets/imgs/fichas/gris.png" />
-            <img class="image19" src="src/assets/imgs/fichas/gris.png" />
-            <img class="image20" src="src/assets/imgs/fichas/gris.png" />
-            <img class="image21" src="src/assets/imgs/fichas/roja.png" />
-            <img class="image22" src="src/assets/imgs/fichas/azul.png" />
-        </div>
-        <div className="contenedor">
-            <div className="dados">
-                <div className="dado-container">
-                    <h4>Atacante:</h4>
-                    <div>
-                        <img className="dado-img" src="src/assets/imgs/dado/uno.png" alt="" />
-                        <img className="dado-img" src="src/assets/imgs/dado/cinco.png" alt="" />
-                    </div>
-                    
+            <header>
+                <div>
+                    <a href="/acerca" target="_blank">
+                        <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
+                    </a>
                 </div>
+            </header>
+            <br />
+            <h1>Simulación de una jugada</h1>
+            <h2>Partida X987A14</h2>
 
-                <div className="dado-container">
-                    <h4>Defensor:</h4>
-                    <div>
-                        <img className="dado-img" src="src/assets/imgs/dado/tres.png" alt="" />
+            <div className="parent">
+                <div className="div1">
+                    <div className="image-container">
+                        <img className="image1" src="src/assets/imgs/tablero.png" />
+                        <Ejercitos territorioConquistado={territorio} cantidadTerritoriosConquistados={territories} />
+                    </div>
+                </div>
+                <div className="div2">
+                    <p>Tu objetivo es conquistar todos los territorios del mundo de Harry Potter</p><br />
+                    <h4>Territorios conquistados: {territories}</h4>
+                </div>
+                <div className="div3">
+                    <div className="dado-container">
+                        <Dados />
                     </div>
                 </div>
             </div>
-            
-            <div class="card">
-                <div>
-                    <img class="hogwarts" src="src/assets/imgs/lugares/pic2.jpeg" alt="Avatar"/>
-                    <h4><b>Hogwarts</b></h4>
-                </div>
-                
-                <div class="container">
-                    <p>Tu objetivo es conquistar todos los territorios pertenecientes a Hogwarts</p>
-                </div>
-            </div> 
-        </div>
-        
-        <p className="read-the-docs">
-            Página hecha por el equipo Las Motomamis
-        </p>
+
+            <p className="read-the-docs">
+                Página hecha por el equipo Las Motomamis
+            </p>
+
+            {/* Modal del ganador */}
+            <Modal
+                isOpen={showWinnerModal}
+                onRequestClose={() => setShowWinnerModal(false)}
+                contentLabel="Has ganado"
+            >
+                <h3>¡El jugador {winner} ha ganado!</h3>
+                <button onClick={() => setShowWinnerModal(false)}>Cerrar</button>
+            </Modal>
         </>
-    )
+    );
 }

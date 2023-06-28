@@ -1,0 +1,23 @@
+.dado-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dice-image {
+    max-width: 45%;
+    height: auto;
+    float: left;
+    margin-left: 5%;
+}
+
+.roll-button {
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

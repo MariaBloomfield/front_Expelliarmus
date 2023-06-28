@@ -1,0 +1,75 @@
+.ejercitos-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.jugador-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.jugador {
+    font-weight: bold;
+}
+
+.ejercito-amarillo,
+.ejercito-rojo,
+.ejercito-azul,
+.ejercito-gris {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.ejercito-1 {
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    width: 2%;
+    height: auto;
+}
+
+.amarillo {
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    width: 2%;
+    height: auto;
+}
+
+.rojo {
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    width: 2%;
+    height: auto;
+}
+
+.azul {
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+    width: 2%;
+    height: auto;
+}
+
+.gris {
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    width: 2%;
+    height: auto;
+}
+
+
+.yo {
+    color: #0fc9f1;
+    font-weight: bold;
+    display: inline-block;
+    /* Muestra los elementos en línea uno al lado del otro */
+    margin-right: 70px;
+    /* Espacio entre los jugadores (puedes ajustarlo según tu preferencia) */
+}
