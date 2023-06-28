@@ -9,6 +9,7 @@ export default function UnirseJuego() {
             .then((response) => {
                 // Manejar la respuesta del backend, si es necesario
                 console.log(response.data);
+                console.log("HOLA");
             })
             .catch((error) => {
                 // Manejar el error en caso de que ocurra
