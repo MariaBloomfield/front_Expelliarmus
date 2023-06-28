@@ -1,0 +1,75 @@
+.main-div {
+    display: flex;
+}
+
+.description {
+    color: #f6f6f6;
+    text-align: justify;
+    margin-right: 3%;
+    margin-left: 3%;
+    display: block;
+}
+
+body {
+    background-color: #012f40;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #f6f6f6;
+}
+
+
+.read-the-docs {
+    color: #888;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #012f40;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:nth-child(odd) {
+    background-color: rgb(228, 224, 224);
+}
+
+#customers tr:hover {
+    background-color: rgb(193, 187, 187);
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #0fc9f1;
+    color: black;
+}
+
+.image-cell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#content {
+    position: relative;
+}
+
+#content img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

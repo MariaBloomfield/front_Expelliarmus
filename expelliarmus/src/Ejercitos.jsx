@@ -1,6 +1,6 @@
-import React from 'react';
 import './Ejercitos.css';
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 const ejercitosPosiciones = {
     1: { id: 1, color: "rojo", top: '5%', left: '51%' },
@@ -47,28 +47,29 @@ const ejercitosPosiciones = {
 };
 
 const Ejercitos = ({ territorioConquistado }) => {
-    // const[territories, setTerritories] = useState({});
-    console.log("territories");
-    // useEffect (() => {
-    //     axios.get(`${import.meta.env.VITE_BACKEND_URL}/start`)
-    //     .then((response) => {
-    //         const data = response.data[0];
-    //         setTerritories(data);
+    console.log("HOLA");
+    const[territories, setTerritories] = useState({});
+    console.log(territories);
+    useEffect (() => {
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/start`)
+        .then((response) => {
+            const data = response.data[0];
+            setTerritories(data);
 
-    //         // Acceder a cada valor del 1 al 41
-    //         for (let i = 1; i <= 41; i++) {
-    //             const territory = territories[i];
-    //             if (territory) {
-    //                 const territoryId = territory.id;
-    //                 const territoryColor = territory.color;
-    //                 console.log(`Territorio ${i}: ID - ${territoryId}, Color - ${territoryColor}`);
-    //             }
-    //         }
-    //     })
-    //     .catch((error) => {
-    //         console.log(error);
-    //     });          
-    // },[]);
+            // Acceder a cada valor del 1 al 41
+            for (let i = 1; i <= 41; i++) {
+                const territory = territories[i];
+                if (territory) {
+                    const territoryId = territory.id;
+                    const territoryColor = territory.color;
+                    console.log(`Territorio ${i}: ID - ${territoryId}, Color - ${territoryColor}`);
+                }
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+        });          
+    },[]);
     // const actualizarColor = () => {
     //     const { id, color } = territorioConquistado;
 

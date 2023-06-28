@@ -4,6 +4,12 @@ import AcercaJuego from './AcercaJuego'
 import Equipo from './Equipo'
 import Instrucciones from './Instrucciones'
 import Partida from './Partida'
+import UnirseJuego from './UnirseJuego'
+import Login from './Login'
+import UserCheck from './protected/UserCheck'
+import AdminCheck from './protected/AdminCheck'
+import Logout from './Logout'
+import Signup from './Signup'
 
 export default function Routing () {
     return (
@@ -14,6 +20,12 @@ export default function Routing () {
                 <Route path={'/equipo'} element={<Equipo />}/>
                 <Route path={'/instrucciones'} element={<Instrucciones />}/>
                 <Route path={'/partida'} element={<Partida />}/>
+                <Route path={'/unirse'} element={<UnirseJuego />}/>
+                <Route path={'/login'} element={<Login />}/>
+                <Route path={'/pruebauser'} element={<UserCheck />} />
+                <Route path={'/pruebaadmin'} element={<AdminCheck />} />
+                <Route path={'/signup'} element={<Signup />} />
+
             </Routes>
         </BrowserRouter>
     )
