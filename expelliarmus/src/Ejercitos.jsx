@@ -1,5 +1,6 @@
 import React from 'react';
 import './Ejercitos.css';
+import axios from 'axios';
 
 const ejercitosPosiciones = {
     1: { id: 1, color: "rojo", top: '5%', left: '51%' },
@@ -45,21 +46,43 @@ const ejercitosPosiciones = {
     41: { id: 41, color: "rojo", top: '22.5%', left: '75%' },
 };
 
-const Ejercitos = ({ territorioConquistado, cantidadTerritoriosConquistados }) => {
-    const actualizarColor = () => {
-        const { id, color } = territorioConquistado;
+const Ejercitos = ({ territorioConquistado }) => {
+    // const[territories, setTerritories] = useState({});
+    console.log("territories");
+    // useEffect (() => {
+    //     axios.get(`${import.meta.env.VITE_BACKEND_URL}/start`)
+    //     .then((response) => {
+    //         const data = response.data[0];
+    //         setTerritories(data);
 
-        if (id !== -1) {
-            const posicion = ejercitosPosiciones[id];
-            if (posicion) {
-                posicion.color = color;
-            }
-        }
-    };
+    //         // Acceder a cada valor del 1 al 41
+    //         for (let i = 1; i <= 41; i++) {
+    //             const territory = territories[i];
+    //             if (territory) {
+    //                 const territoryId = territory.id;
+    //                 const territoryColor = territory.color;
+    //                 console.log(`Territorio ${i}: ID - ${territoryId}, Color - ${territoryColor}`);
+    //             }
+    //         }
+    //     })
+    //     .catch((error) => {
+    //         console.log(error);
+    //     });          
+    // },[]);
+    // const actualizarColor = () => {
+    //     const { id, color } = territorioConquistado;
 
-    React.useEffect(() => {
-        actualizarColor();
-    }, [territorioConquistado]);
+    //     if (id !== -1) {
+    //         const posicion = ejercitosPosiciones[id];
+    //         if (posicion) {
+    //             posicion.color = color;
+    //         }
+    //     }
+    // };
+
+    // React.useEffect(() => {
+    //     actualizarColor();
+    // }, [territorioConquistado]);
 
     return (
         <div>
