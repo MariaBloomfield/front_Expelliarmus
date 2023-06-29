@@ -2,9 +2,11 @@ import React, { useState, useContext } from 'react';
 import { AuthContext } from './auth/AuthContext';
 import axios from 'axios';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
+    const navigateTo = useNavigate();
     const { token, setToken } = useContext(AuthContext);
     const { user, setUser } = useContext(AuthContext);
     const [username, setUsername] = useState("");
@@ -30,6 +32,7 @@ function Login() {
             setUser(response.data.username);
             console.log("Se seteo el user: ", user);
             console.log("Se seteo el token: ", token);
+            navigateTo('/unirse')
         }).catch((error) => {
             console.error('An error occurred while trying to login:', error);
             setError(true);// aquí puede haber más lógica para tratar los errores

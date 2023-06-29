@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
+    const navigateTo = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
@@ -19,6 +21,7 @@ function Signup() {
             console.log('Registro exitoso! Ahora puedes volver y loguearte');
             setError(false);
             setMsg('Registro exitoso! Ahora puedes volver y loguearte');
+            navigateTo('/unirse')
         }).catch((error) => {
             console.error('Ocurrió un error:', error);
             setError(true); // aquí puede haber más lógica para tratar los errores

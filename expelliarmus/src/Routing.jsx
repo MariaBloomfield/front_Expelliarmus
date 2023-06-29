@@ -20,8 +20,8 @@ export default function Routing () {
                 <Route path={'/equipo'} element={<Equipo />}/>
                 <Route path={'/instrucciones'} element={<Instrucciones />}/>
                 <Route path={'/partida'} element={<Partida />}/>
-                <Route path={'/unirse'} element={<UnirseJuego />}/>
                 <Route path={'/login'} element={<Login />}/>
+                <Route path={'/unirse'} element={<UnirseJuego />} />
                 <Route path={'/pruebauser'} element={<UserCheck />} />
                 <Route path={'/pruebaadmin'} element={<AdminCheck />} />
                 <Route path={'/signup'} element={<Signup />} />
