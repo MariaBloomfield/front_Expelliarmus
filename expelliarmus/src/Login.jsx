@@ -6,6 +6,7 @@ import './Login.css';
 
 function Login() {
     const { token, setToken } = useContext(AuthContext);
+    const { user, setUser } = useContext(AuthContext);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
@@ -24,7 +25,10 @@ function Login() {
             // Recibimos el token y lo procesamos
             const access_token = response.data.access_token;
             localStorage.setItem('token', access_token);
+            localStorage.setItem('user', JSON.stringify(username));
             setToken(access_token);
+            setUser(response.data.username);
+            console.log("Se seteo el user: ", user);
             console.log("Se seteo el token: ", token);
         }).catch((error) => {
             console.error('An error occurred while trying to login:', error);
