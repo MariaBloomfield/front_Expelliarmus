@@ -1,6 +1,9 @@
 import './Ejercitos.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { AuthContext } from "./auth/AuthContext";
+import { useContext } from 'react';
+
 
 const ejercitosPosiciones = {
     1: { id: 1, color: "rojo", top: '5%', left: '51%' },
@@ -47,13 +50,14 @@ const ejercitosPosiciones = {
 };
 
 const Ejercitos = ({ territorioConquistado }) => {
+    const { gameId } = useContext(AuthContext);
     console.log("HOLA");
     const[territories, setTerritories] = useState({});
     console.log(territories);
     useEffect (() => {
-        axios.get(`${import.meta.env.VITE_BACKEND_URL}/start`)
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/start/${gameId}`)
         .then((response) => {
-            const data = response.data[0];
+            const data = response.data.resultado;
             setTerritories(data);
 
             // Acceder a cada valor del 1 al 41

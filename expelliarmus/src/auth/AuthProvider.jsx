@@ -19,7 +19,7 @@ function AuthProvider({ children }) {
     }, [token]);
 
     useEffect(() => {
-        localStorage.setItem('userId', JSON.stringify(user));
+        localStorage.setItem('user', JSON.stringify(user));
     });
 
     useEffect(() => {
