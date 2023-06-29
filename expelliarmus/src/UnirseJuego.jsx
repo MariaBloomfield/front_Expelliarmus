@@ -26,8 +26,6 @@ export default function UnirseJuego() {
             if (players === 4) {
                 console.log("Se llegó a 4 jugadores");
                 navigate('/partida');
-                // axios.get(`${import.meta.env.VITE_BACKEND_URL}/start/${gameId}`);
-                // console.log(response.data);
             }
         })
         .catch((error) => {

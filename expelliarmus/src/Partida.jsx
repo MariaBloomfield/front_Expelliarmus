@@ -1,12 +1,15 @@
 import './Partida.css'
 import Dados from './Dados';
 import Ejercitos from './Ejercitos';
+import { AuthContext } from "./auth/AuthContext";
+import { useContext } from 'react';
+
 export default function Partida() {
+    const { gameId } = useContext(AuthContext);
     return (
         <>
         <br></br>
-        <h1>Simulación de una jugada</h1>
-        <h2>Partida X987A14</h2>
+        <h2>Partida X{ gameId }</h2>
 
         <div class="parent">
             <div class="div1"> <div class="image-container"> 

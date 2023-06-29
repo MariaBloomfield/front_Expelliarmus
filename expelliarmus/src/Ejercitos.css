@@ -64,6 +64,50 @@
     height: auto;
 }
 
+.ejercito-1:hover,
+.ejercito-2:hover,
+.ejercito-3:hover,
+.ejercito-4:hover,
+.ejercito-5:hover,
+.ejercito-6:hover,
+.ejercito-7:hover,
+.ejercito-8:hover,
+.ejercito-9:hover,
+.ejercito-10:hover,
+.ejercito-11:hover,
+.ejercito-12:hover,
+.ejercito-13:hover,
+.ejercito-14:hover,
+.ejercito-15:hover,
+.ejercito-16:hover,
+.ejercito-17:hover,
+.ejercito-18:hover,
+.ejercito-19:hover,
+.ejercito-20:hover,
+.ejercito-21:hover,
+.ejercito-22:hover,
+.ejercito-23:hover,
+.ejercito-24:hover,
+.ejercito-25:hover,
+.ejercito-26:hover,
+.ejercito-27:hover,
+.ejercito-28:hover,
+.ejercito-29:hover,
+.ejercito-30:hover,
+.ejercito-31:hover,
+.ejercito-32:hover,
+.ejercito-33:hover,
+.ejercito-34:hover,
+.ejercito-35:hover,
+.ejercito-36:hover,
+.ejercito-37:hover,
+.ejercito-38:hover,
+.ejercito-39:hover,
+.ejercito-40:hover,
+.ejercito-41:hover {
+    transform: scale(1.5);
+}
+
 
 .yo {
     color: #0fc9f1;

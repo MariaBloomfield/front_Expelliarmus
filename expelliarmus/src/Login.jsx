@@ -8,6 +8,8 @@ function Login() {
     const navigateTo = useNavigate();
     const { token, setToken } = useContext(AuthContext);
     const { user, setUser } = useContext(AuthContext);
+    const { gameId, setGameId } = useContext(AuthContext);
+    const { players, setPlayers } = useContext(AuthContext);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
@@ -23,6 +25,7 @@ function Login() {
             console.log('Login successful');
             setError(false);
             setMsg("Login exitoso!");
+            console.log(response.data);
 
             // Recibimos el token y lo procesamos
             const access_token = response.data.access_token;
@@ -30,10 +33,22 @@ function Login() {
             localStorage.setItem('user', JSON.stringify(username));
             setToken(access_token);
             setUser(response.data.username);
-            console.log("Se seteó el user: ", user);
-            console.log("Se seteó el token: ", token);
-            navigateTo('/unirse');
-
+            axios.get(`${import.meta.env.VITE_BACKEND_URL}/game_info/${username}`).then((response) => {
+                const { gameId, players } = response.data;
+            
+                // Actualizar gameId y players en el contexto de autenticación
+                setGameId(gameId);
+                setPlayers(players);
+                console.log("num de jugadores: ", players);
+                console.log("gameId: ", gameId);
+                if (gameId !== null && players === 4) {
+                    console.log("incio sesion y esta en un juego con 4 jugadores");
+                    navigateTo('/partida');
+                }
+                else {
+                    navigateTo('/unirse');
+                }
+            });
             setUsername("");
             setPassword("");
         }).catch((error) => {

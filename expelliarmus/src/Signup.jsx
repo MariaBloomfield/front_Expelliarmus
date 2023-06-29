@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from './auth/AuthContext';
 
 function Signup() {
     const navigateTo = useNavigate();
@@ -9,6 +10,8 @@ function Signup() {
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
     const [msg, setMsg] = useState("");
+    const { token, setToken } = useContext(AuthContext);
+    const { user, setUser } = useContext(AuthContext);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -20,7 +23,28 @@ function Signup() {
             console.log('Registro exitoso! Ahora puedes volver y loguearte');
             setError(false);
             setMsg('Registro exitoso! Ahora puedes volver y loguearte');
-            navigateTo('/unirse');
+            axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+                username: username,
+                password: password
+            }).then((response) => {
+                console.log('Login successful');
+                setError(false);
+                setMsg("Login exitoso!");
+                console.log(response.data);
+    
+                // Recibimos el token y lo procesamos
+                const access_token = response.data.access_token;
+                localStorage.setItem('token', access_token);
+                localStorage.setItem('user', JSON.stringify(username));
+                setToken(access_token);
+                setUser(response.data.username);
+                navigateTo('/unirse');
+                setUsername("");
+                setPassword("");
+            }).catch((error) => {
+                console.error('An error occurred while trying to login:', error);
+                setError(true); // aquí puede haber más lógica para tratar los errores
+            });
         }).catch((error) => {
             console.error('Ocurrió un error:', error);
             setError(true); // aquí puede haber más lógica para tratar los errores

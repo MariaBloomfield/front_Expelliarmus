@@ -10,7 +10,8 @@ function AuthProvider({ children }) {
     function logout() {
         setToken(null);
         setUser(null);
-        // setGameId(null);
+        setGameId(null);
+        setPlayers(null);
         console.log("Se hizo logout");
     }
 
@@ -20,15 +21,15 @@ function AuthProvider({ children }) {
 
     useEffect(() => {
         localStorage.setItem('user', JSON.stringify(user));
-    });
+    }, [user]);
 
     useEffect(() => {
         localStorage.setItem('gameId', JSON.stringify(gameId));
-    });
+    }, [gameId]);
 
     useEffect(() => {
         localStorage.setItem('players', JSON.stringify(players));
-    });
+    }, [players]);
 
     return (
         <AuthContext.Provider value={{ token, setToken, logout, user, setUser, gameId, setGameId, players, setPlayers }}>
