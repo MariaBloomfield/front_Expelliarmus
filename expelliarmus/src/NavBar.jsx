@@ -17,8 +17,8 @@ export default function NavBar() {
                 <a href="/partida" className="hover-link">Partida</a>
                 <a href="/unirse" className="hover-link">Unirse a juego</a>
                 <div className="right-links">
-                    <a href="/login" className="hover-link">Login</a>
-                    <a href="/signup" className="hover-link">Signup</a>
+                    <a href="/login" className="hover-link">Log in</a>
+                    <a href="/signup" className="hover-link">Sign up</a>
                 </div>
             </div>
         </>

@@ -4,7 +4,6 @@ import axios from 'axios';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 
-
 function Login() {
     const navigateTo = useNavigate();
     const { token, setToken } = useContext(AuthContext);
@@ -24,50 +23,53 @@ function Login() {
             console.log('Login successful');
             setError(false);
             setMsg("Login exitoso!");
+
             // Recibimos el token y lo procesamos
             const access_token = response.data.access_token;
             localStorage.setItem('token', access_token);
             localStorage.setItem('user', JSON.stringify(username));
             setToken(access_token);
             setUser(response.data.username);
-            console.log("Se seteo el user: ", user);
-            console.log("Se seteo el token: ", token);
-            navigateTo('/unirse')
+            console.log("Se seteó el user: ", user);
+            console.log("Se seteó el token: ", token);
+            navigateTo('/unirse');
+
+            setUsername("");
+            setPassword("");
         }).catch((error) => {
             console.error('An error occurred while trying to login:', error);
-            setError(true);// aquí puede haber más lógica para tratar los errores
-        })
-
+            setError(true); // aquí puede haber más lógica para tratar los errores
+        });
     };
-
 
     return (
         <div className="Login">
+            <h2>Log in</h2>
             {msg.length > 0 && <div className="successMsg"> {msg} </div>}
 
-            {error && <div className="error">Hubo un error con el Login, por favor trata nuevamente.</div>}
+            {error && <div className="error">Hubo un error con el Login, por favor intenta nuevamente.</div>}
             <form onSubmit={handleSubmit}>
                 <label>
-                    Username:
+                    {/* <span className="sr-only">Username:</span> */}
                     <input
-                        type="username"
+                        type="text"
                         name="username"
+                        placeholder="Username"
                         value={username}
                         onChange={e => setUsername(e.target.value)}
-                        required
                     />
                 </label>
                 <label>
-                    Password:
+                    {/* <span className="sr-only">Password:</span> */}
                     <input
                         type="password"
                         name="password"
+                        placeholder="Password"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
-                        required
                     />
                 </label>
-                <input type="submit" value="Enviar" />
+                <input type="submit" value="Iniciar Sesión" />
             </form>
         </div>
     );
