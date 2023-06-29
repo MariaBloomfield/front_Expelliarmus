@@ -10,7 +10,8 @@ function AuthProvider({ children }) {
     function logout() {
         setToken(null);
         setUser(null);
-        setGameId(null);
+        // setGameId(null);
+        console.log("Se hizo logout");
     }
 
     useEffect(() => {

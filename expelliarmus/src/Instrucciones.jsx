@@ -3,13 +3,6 @@ import CambiarTexto from './CambiarTexto'
 export default function Instrucciones() {
     return (
         <>
-        <header>
-        <div>
-          <a href="/acerca" target="_blank">
-            <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
-          </a> 
-        </div>
-        </header>
         <div class="container">
             <div id="cf">
                 <img class="primera" src="src/assets/imgs/lugares/pic1.jpeg" />

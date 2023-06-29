@@ -2,13 +2,6 @@ import './AcercaJuego.css'
 export default function AcercaJuego() {
     return(
         <>
-        <header>
-        <div>
-          <a href="/acerca" target="_blank">
-            <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
-          </a> 
-        </div>
-        </header>
         <br></br>
         <div>
             <h1>¿Qué es Expelliarmus?</h1>

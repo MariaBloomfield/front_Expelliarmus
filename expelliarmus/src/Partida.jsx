@@ -4,13 +4,6 @@ import Ejercitos from './Ejercitos';
 export default function Partida() {
     return (
         <>
-        <header>
-        <div>
-          <a href="/acerca" target="_blank">
-            <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
-          </a> 
-        </div>
-        </header>
         <br></br>
         <h1>Simulación de una jugada</h1>
         <h2>Partida X987A14</h2>

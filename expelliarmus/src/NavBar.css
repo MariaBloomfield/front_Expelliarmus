@@ -1,38 +1,70 @@
+body {
+  margin: 0;
+  /* Elimina el margen predeterminado del cuerpo */
+}
+
 .topnav {
   background-color: #032f40;
   overflow: hidden;
   position: fixed;
-  top: 10px;
-  left: 20px;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 40px;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  margin-right: 25px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.topnav a:last-child {
+  margin-right: 0;
 }
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #0fc9f1;
-  color: black;
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  /* Agrega un margen derecho de 10px */
 }
 
 .logo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 14px 16px;
-  height: 100px;
+  margin-right: 3px;
+  margin-top: 0px;
+  height: 40px;
   width: auto;
 }
+
+.expelliarmus {
+  margin-top: 0px;
+  height: 20px;
+  width: auto;
+}
+
+.right-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.right-links a {
+  margin-left: 8px;
+}
+
+.right-links a:last-child {
+  margin-right: 0;
+}
+
+.topnav a.hover-link:hover {
+  background-color: #fff;
+  color: #000;
+} 

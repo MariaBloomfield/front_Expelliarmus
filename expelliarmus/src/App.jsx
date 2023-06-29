@@ -9,13 +9,6 @@ function App() {
   
   return (
     <div className="App">
-      <header>
-        <div>
-          <a href="/acerca" target="_blank">
-            <img src="src/assets/imgs/logo.png" className="logo expelliarmus" alt="logo" />
-          </a> 
-        </div>
-      </header>
       <br /><br />
       <h1>EXPELLIARMUS</h1>
       <div class="main-div">

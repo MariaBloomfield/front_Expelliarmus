@@ -22,6 +22,12 @@ export default function UnirseJuego() {
             const { gameId } = response.data; // Obtener el gameId de la respuesta
             console.log("gameId: ", gameId);
             setGameId(gameId);
+            if (players === 4) {
+                console.log("Se llegó a 4 jugadores");
+                navigate('/partida');
+                axios.get(`${import.meta.env.VITE_BACKEND_URL}/start/${gameId}`);
+                console.log(response.data);
+            }
         })
         .catch((error) => {
             // Manejar el error en caso de que ocurra
@@ -29,19 +35,10 @@ export default function UnirseJuego() {
         });
     };
 
+
+
     return (
         <>
-            <header>
-                <div>
-                    <a href="/acerca" target="_blank">
-                        <img
-                            src="src/assets/imgs/logo.png"
-                            className="logo expelliarmus"
-                            alt="logo"
-                        />
-                    </a>
-                </div>
-            </header>
             <br />
             <div>
                 <h1>¿Quieres jugar a Expelliarmus?</h1>
