@@ -10,7 +10,6 @@ export default function NavBar() {
             <a href="/partida">Partida</a>
             <a href="/unirse">Unirse a juego</a>
             <a href="/login">Login</a>
-            <a href="/logout">Logout</a>
             <a href="/signup">Signup</a>
         </div>
         </>

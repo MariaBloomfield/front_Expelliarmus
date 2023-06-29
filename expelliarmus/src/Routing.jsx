@@ -8,7 +8,6 @@ import UnirseJuego from './UnirseJuego'
 import Login from './Login'
 import UserCheck from './protected/UserCheck'
 import AdminCheck from './protected/AdminCheck'
-import Logout from './Logout'
 import Signup from './Signup'
 
 export default function Routing () {
