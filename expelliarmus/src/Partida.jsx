@@ -52,7 +52,7 @@ export default function Partida() {
             <div class="parent">
                 <div class="div1">
                     <div class="image-container">
-                        <img class="image1" src="src/assets/imgs/tablero.png" />
+                        <img class="image1" src="public/assets/imgs/tablero.png" />
                         <Ejercitos
                             territorioConquistado={datosterritory}
                             handleClickTerritorio={handleClickTerritorio}

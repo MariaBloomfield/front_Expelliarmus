@@ -41,7 +41,7 @@ const Dados = ({ resultado }) => {
                 <h4>Atacante:</h4>
                 {atacanteResultado && (
                     <img
-                        src={`src/assets/imgs/dado/dice-${atacanteResultado}.png`}
+                        src={`public/assets/imgs/dado/dice-${atacanteResultado}.png`}
                         alt={`Dice ${atacanteResultado}`}
                         className="dice-image"
                     />
@@ -51,7 +51,7 @@ const Dados = ({ resultado }) => {
                 <h4>Defensor:</h4>
                 {defensorResultado && (
                     <img
-                        src={`src/assets/imgs/dado/dice-${defensorResultado}.png`}
+                        src={`public/assets/imgs/dado/dice-${defensorResultado}.png`}
                         alt={`Dice ${defensorResultado}`}
                         className="dice-image"
                     />

@@ -131,7 +131,7 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
         <img
           key={territorio.id}
           className={`ejercito-${territorio.id}`}
-          src={`src/assets/imgs/fichas/${territorio.color}.png`}
+          src={`public/assets/imgs/fichas/${territorio.color}.png`}
           alt={`Ejército ${territorio.color}`}
           style={{
             top: territorio.top,
@@ -147,19 +147,19 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
       <div className="ejercitos-container">
         <div className="jugador-container">
           <div className="jugador">Jugador 1</div>
-          <img className="ejercito-amarillo" src="src/assets/imgs/fichas/amarillo.png" alt="Ejército Amarillo" />
+          <img className="ejercito-amarillo" src="public/assets/imgs/fichas/amarillo.png" alt="Ejército Amarillo" />
         </div>
         <div className="jugador-container">
           <div className="jugador">Jugador 2</div>
-          <img className="ejercito-rojo" src="src/assets/imgs/fichas/rojo.png" alt="Ejército Rojo" />
+          <img className="ejercito-rojo" src="public/assets/imgs/fichas/rojo.png" alt="Ejército Rojo" />
         </div>
         <div className="jugador-container">
           <div className="jugador">Jugador 3</div>
-          <img className="ejercito-azul" src="src/assets/imgs/fichas/azul.png" alt="Ejército Azul" />
+          <img className="ejercito-azul" src="public/assets/imgs/fichas/azul.png" alt="Ejército Azul" />
         </div>
         <div className="jugador-container">
           <div className="yo">Jugador 4 ({user})</div>
-          <img className="ejercito-gris" src="src/assets/imgs/fichas/gris.png" alt="Ejército Gris" />
+          <img className="ejercito-gris" src="public/assets/imgs/fichas/gris.png" alt="Ejército Gris" />
         </div>
       </div>
     </div>

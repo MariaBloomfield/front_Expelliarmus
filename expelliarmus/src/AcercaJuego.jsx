@@ -33,35 +33,35 @@ export default function AcercaJuego() {
         </tr>
         <tr>
             <td>1</td>
-            <td> <img class="image-cell" src="src/assets/imgs/avatars/harry.jpeg" alt="" title="Harry"/></td>
+            <td> <img class="image-cell" src="public/assets/imgs/avatars/harry.jpeg" alt="" title="Harry"/></td>
             <td>Maria Anders</td>
             <td>Griffindor</td>
             <td>1057</td>
         </tr>
         <tr>
             <td>2</td>
-            <td> <img class="image-cell" src="src/assets/imgs/avatars/cedric.jpeg" alt="" title="Harry"/></td>
+            <td> <img class="image-cell" src="public/assets/imgs/avatars/cedric.jpeg" alt="" title="Harry"/></td>
             <td>Christina Berglund</td>
             <td>Hufflepuff</td>
             <td>934</td>
         </tr>
         <tr>
             <td>3</td>
-            <td> <img class="image-cell" src="src/assets/imgs/avatars/luna.jpeg" alt="" title="Harry"/></td>
+            <td> <img class="image-cell" src="public/assets/imgs/avatars/luna.jpeg" alt="" title="Harry"/></td>
             <td>Francisco Chang</td>
             <td>Ravenclaw</td>
             <td>823</td>
         </tr>
         <tr>
             <td>4</td>
-            <td> <img class="image-cell" src="src/assets/imgs/avatars/draco.jpeg" alt="" title="Harry"/></td>
+            <td> <img class="image-cell" src="public/assets/imgs/avatars/draco.jpeg" alt="" title="Harry"/></td>
             <td>Roland Mendel</td>
             <td>Slytherin</td>
             <td>808</td>
         </tr>
         <tr>
             <td>5</td>
-            <td> <img class="image-cell" src="src/assets/imgs/avatars/hermaione.jpeg" alt="" title="Harry"/></td>
+            <td> <img class="image-cell" src="public/assets/imgs/avatars/hermaione.jpeg" alt="" title="Harry"/></td>
             <td>Helen Bennett</td>
             <td>Griffindor</td>
             <td>779</td>

@@ -1,6 +1,6 @@
 import './NavBar.css';
-import logo from './assets/imgs/logo.png';
-import expelliarmusLogo from './assets/imgs/expelliarmus.png';
+import logo from '../public/assets/imgs/logo.png';
+import expelliarmusLogo from '../public/assets/imgs/expelliarmus.png';
 import React, { useContext } from 'react';
 import { AuthContext } from './auth/AuthContext';
 

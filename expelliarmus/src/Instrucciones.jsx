@@ -5,9 +5,9 @@ export default function Instrucciones() {
         <>
         <div class="container">
             <div id="cf">
-                <img class="primera" src="src/assets/imgs/lugares/pic1.jpeg" />
-                <img class="segunda" src="src/assets/imgs/lugares/pic2.jpeg" />
-                <img class="tercera" src="src/assets/imgs/lugares/pic3.jpeg" />
+                <img class="primera" src="public/assets/imgs/lugares/pic1.jpeg" />
+                <img class="segunda" src="public/assets/imgs/lugares/pic2.jpeg" />
+                <img class="tercera" src="public/assets/imgs/lugares/pic3.jpeg" />
 
             </div>
             <div>
