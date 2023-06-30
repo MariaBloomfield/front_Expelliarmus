@@ -58,29 +58,29 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
 
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/start/${gameId}`)
-      .then((response) => {
+    .then((response) => {
         const data = response.data.resultado;
         setTerritories(data);
 
         // Actualizar los colores en ejercitosPosiciones según los datos recibidos del backend
         setEjercitosPosiciones(prevEjercitosPosiciones => {
-          const updatedEjercitosPosiciones = { ...prevEjercitosPosiciones };
-          Object.keys(data).forEach((territorioId) => {
+        const updatedEjercitosPosiciones = { ...prevEjercitosPosiciones };
+        Object.keys(data).forEach((territorioId) => {
             const color = data[territorioId].color;
             const id = data[territorioId].id;
             if (updatedEjercitosPosiciones[id]) {
-              updatedEjercitosPosiciones[id] = {
+            updatedEjercitosPosiciones[id] = {
                 ...updatedEjercitosPosiciones[id],
                 color: color
-              };
+            };
             }
-          });
-          return updatedEjercitosPosiciones;
         });
-      })
-      .catch((error) => {
+        return updatedEjercitosPosiciones;
+        });
+    })
+    .catch((error) => {
         console.log(error);
-      });
+    });
   }, [gameId]);
 
   useEffect(() => {
@@ -144,11 +144,6 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
         />
       ))}
 
-      <div>
-        <p>Color del Ejército con ID 1: {colorEjercitoId1}</p>
-        <p>Game ID: {gameId}</p>
-      </div>
-
       <div className="ejercitos-container">
         <div className="jugador-container">
           <div className="jugador">Jugador 1</div>
@@ -163,7 +158,7 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
           <img className="ejercito-azul" src="src/assets/imgs/fichas/azul.png" alt="Ejército Azul" />
         </div>
         <div className="jugador-container">
-          <div className="yo">Jugador 4 (Yo)</div>
+          <div className="yo">Jugador 4 ({user})</div>
           <img className="ejercito-gris" src="src/assets/imgs/fichas/gris.png" alt="Ejército Gris" />
         </div>
       </div>

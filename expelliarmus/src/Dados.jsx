@@ -10,6 +10,7 @@ const Dados = ({ resultado }) => {
     const { territoryId } = useContext(AuthContext);
     const { numterritories, setNumterritories } = useContext(AuthContext);
     const { datosterritory, setDatosterritory } = useContext(AuthContext);
+    const { winner, setWinner } = useContext(AuthContext);
 
     const rollDice = () => {
         const atacanteRandom = Math.floor(Math.random() * 6) + 1;
@@ -22,6 +23,7 @@ const Dados = ({ resultado }) => {
             const data = response.data.resultado;
             setNumterritories(data.territories);
             setDatosterritory(data.territorio);
+            setWinner(data.winner);
             resultado(data);
             console.log(data);
         })

@@ -21,9 +21,7 @@ export default function NavBar() {
                 
                 {gameId ===null && user && (
                     <a href="/unirse" className="hover-link">Unirse a juego</a>
-                )} { gameId !==null && (
-                    <a href="/partida" className="hover-link">Partida</a>
-                )}
+                )} 
                 {!user && (
                     <div className="right-links">
                         <a href="/login" className="hover-link">Log in</a>

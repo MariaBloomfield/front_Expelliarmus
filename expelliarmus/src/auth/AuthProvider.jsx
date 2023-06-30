@@ -9,6 +9,7 @@ function AuthProvider({ children }) {
     const [territoryId, setTerritoryId] = useState(localStorage.getItem('territoryId') || null);
     const [numterritories, setNumterritories] = useState(localStorage.getItem('numterritories') || null);
     const [datosterritory, setDatosterritory] = useState(localStorage.getItem('datosterritory') || null);
+    const [winner, setWinner] = useState(localStorage.getItem('winner') || null);
 
     function logout() {
         setToken(null);
@@ -18,6 +19,7 @@ function AuthProvider({ children }) {
         setTerritoryId(null);
         setNumterritories(null);
         setDatosterritory(null);
+        setWinner(null);
         console.log("Se hizo logout");
     }
 
@@ -49,8 +51,12 @@ function AuthProvider({ children }) {
         localStorage.setItem('datosterritory', JSON.stringify(datosterritory));
     }, [datosterritory]);
 
+    useEffect(() => {
+        localStorage.setItem('winner', JSON.stringify(winner));
+    }, [winner]);
+
     return (
-        <AuthContext.Provider value={{ token, setToken, logout, user, setUser, gameId, setGameId, players, setPlayers, territoryId, setTerritoryId, numterritories, setNumterritories, datosterritory, setDatosterritory }}>
+        <AuthContext.Provider value={{ token, setToken, logout, user, setUser, gameId, setGameId, players, setPlayers, territoryId, setTerritoryId, numterritories, setNumterritories, datosterritory, setDatosterritory, winner, setWinner }}>
             {children}
         </AuthContext.Provider>
     );
