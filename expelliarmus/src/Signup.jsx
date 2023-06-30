@@ -12,6 +12,7 @@ function Signup() {
     const [msg, setMsg] = useState("");
     const { token, setToken } = useContext(AuthContext);
     const { user, setUser } = useContext(AuthContext);
+    const { gameId, setGameId } = useContext(AuthContext);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -38,6 +39,7 @@ function Signup() {
                 localStorage.setItem('user', JSON.stringify(username));
                 setToken(access_token);
                 setUser(response.data.username);
+                setGameId(0);
                 navigateTo('/unirse');
                 setUsername("");
                 setPassword("");

@@ -11,7 +11,7 @@ export default function Instrucciones() {
 
             </div>
             <div>
-                <h1>Instrucciones</h1>
+                <h1 class="ocultar"> Instrucciones</h1>
                 <CambiarTexto />
             </div>
         </div>

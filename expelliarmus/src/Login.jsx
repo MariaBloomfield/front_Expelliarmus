@@ -33,7 +33,8 @@ function Login() {
             localStorage.setItem('user', JSON.stringify(username));
             setToken(access_token);
             setUser(response.data.username);
-            axios.get(`${import.meta.env.VITE_BACKEND_URL}/game_info/${username}`).then((response) => {
+            axios.get(`${import.meta.env.VITE_BACKEND_URL}/game_info/${username}`)
+            .then((response) => {
                 const { gameId, players } = response.data;
             
                 // Actualizar gameId y players en el contexto de autenticación

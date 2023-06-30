@@ -9,6 +9,8 @@ import Login from './Login'
 import UserCheck from './protected/UserCheck'
 import AdminCheck from './protected/AdminCheck'
 import Signup from './Signup'
+import Logout from './Logout'
+import SalaEspera from './SalaEspera'
 
 export default function Routing () {
     return (
@@ -24,6 +26,8 @@ export default function Routing () {
                 <Route path={'/pruebauser'} element={<UserCheck />} />
                 <Route path={'/pruebaadmin'} element={<AdminCheck />} />
                 <Route path={'/signup'} element={<Signup />} />
+                <Route path={'/logout'} element={<Logout />} />
+                <Route path={'/espera'} element={<SalaEspera />} />
 
             </Routes>
         </BrowserRouter>

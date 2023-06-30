@@ -21,3 +21,15 @@
     justify-content: center;
     margin-top: 20px;
 }
+
+.atacar {
+  position: absolute;
+  top: 600px;
+  left: 1000px;
+}
+
+button {
+    position: absolute;
+    top: 600px;
+    left: 1000px;
+  }

@@ -1,13 +1,16 @@
 import './Ejercitos.css';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import { AuthContext } from "./auth/AuthContext";
 import { useContext } from 'react';
 import React from 'react';
+import Partida from './Partida';
+import { useNavigate } from 'react-router-dom';
 
-const Ejercitos = ({ territorioConquistado }) => {
-  const { gameId } = useContext(AuthContext);
+const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
+  const { gameId, user, territoryId, setTerritoryId } = useContext(AuthContext);
   const [territories, setTerritories] = useState({});
+
   const [ejercitosPosiciones, setEjercitosPosiciones] = useState({
       1: { id: 1, color: "rojo", top: '5%', left: '51%' },
       2: { id: 2, color: "rojo", top: '3.5%', left: '58%' },
@@ -103,7 +106,15 @@ const Ejercitos = ({ territorioConquistado }) => {
 
   const handleClick = (ejercitoId) => {
     console.log(`Ejército ${ejercitoId} fue clickeado.`);
-    // Aquí puedes agregar la lógica adicional que desees para manejar el evento de clic
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/attack/${ejercitoId}/${user}`)
+        .then((response) => {
+            setTerritoryId(ejercitoId);
+            console.log(ejercitoId);
+            handleClickTerritorio(ejercitoId);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
   };
 
   return (
