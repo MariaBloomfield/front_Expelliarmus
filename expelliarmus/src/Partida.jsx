@@ -11,6 +11,8 @@ export default function Partida() {
     const { numterritories, datosterritory, winner } = useContext(AuthContext);
     const [mostrarModal, setMostrarModal] = useState(false);
     const [errorMensaje, setErrorMensaje] = useState('');
+    const [mostrarPopup, setMostrarPopup] = useState(false); 
+    const [mostrarPopup2, setMostrarPopup2] = useState(false); 
 
     const handleClickTerritorio = (ejercitoId) => {
         setTerritoryId(ejercitoId);
@@ -30,10 +32,11 @@ export default function Partida() {
         console.log(data.winner);
         if (territorio !== -1) {
             console.log("ataque existoso");
-        } else if ( winner !== -1 && winner !== false) {
-            console.log("jugador es el ganador");
+            setMostrarPopup(true);
+            if ( numterritories === 41) {
+                setMostrarPopup2(true);
+            }
         }
-
     }
 
     const actualizarMostrarDados = (mostrar) => {
@@ -80,7 +83,28 @@ export default function Partida() {
                     <button className="close-button" onClick={() => setMostrarModal(false)}>Cerrar</button>
                 </div>
             </ReactModal>
-
+            <ReactModal
+                isOpen={mostrarPopup}
+                onRequestClose={() => setMostrarPopup(false)}
+                contentLabel="Territorio conquistado"
+                className="popup-container"
+            >
+                <div className="content">
+                    <h3 className="mensajeError">Territorio conquistado</h3>
+                    <button className="close-button" onClick={() => setMostrarPopup(false)}>Cerrar</button>
+                </div>
+            </ReactModal>
+            <ReactModal
+                isOpen={mostrarPopup2}
+                onRequestClose={() => setMostrarPopup2(false)}
+                contentLabel="Territorio conquistado"
+                className="popup-container"
+            >
+                <div className="content">
+                    <h3>¡Felicitaciones! Has ganado el juego</h3>
+                    <button className="close-button" onClick={() => setMostrarPopup2(false)}>Cerrar</button>
+                </div>
+            </ReactModal>
 
 
             <p className="read-the-docs">Página hecha por el equipo Las Motomamis</p>

@@ -7,7 +7,7 @@ function AuthProvider({ children }) {
     const [gameId, setGameId] = useState(localStorage.getItem('gameId') || null);
     const [players, setPlayers] = useState(localStorage.getItem('players') || null);
     const [territoryId, setTerritoryId] = useState(localStorage.getItem('territoryId') || null);
-    const [numterritories, setNumterritories] = useState(localStorage.getItem('numterritories') || null);
+    const [numterritories, setNumterritories] = useState(localStorage.getItem('numterritories') || 0);
     const [datosterritory, setDatosterritory] = useState(localStorage.getItem('datosterritory') || null);
     const [winner, setWinner] = useState(localStorage.getItem('winner') || null);
 
