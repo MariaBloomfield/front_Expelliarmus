@@ -108,9 +108,17 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
     console.log(`Ejército ${ejercitoId} fue clickeado.`);
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/attack/${ejercitoId}/${user}`)
         .then((response) => {
-            setTerritoryId(ejercitoId);
-            console.log(ejercitoId);
-            handleClickTerritorio(ejercitoId);
+            const data = response.data;
+            console.log(data);
+            if (data === -1){
+                handleClickTerritorio(-1);
+                setTerritoryId(-1);
+            } else {
+                console.log(ejercitoId);
+                setTerritoryId(ejercitoId);
+                handleClickTerritorio(ejercitoId); 
+            }
+            
         })
         .catch((error) => {
             console.log(error);
