@@ -12,7 +12,7 @@ export default function Equipo() {
                     </p>
 
                 </span>
-                <img class="img-block" src="public/assets/imgs/equipo/mery.jpeg" alt="" />
+                <img class="img-block" src="/assets/imgs/equipo/mery.jpeg" alt="" />
             </div>
             <div>
                 <span>
@@ -20,11 +20,11 @@ export default function Equipo() {
                         <p>Estudiante de Ingeniería de Software de cuarto año en la Pontificia Universidad Católica. En su tiempo libre le gusta hacer trekkings, tocar guitarra y piano. 
                     </p>
                 </span>
-                <img src="public/assets/imgs/equipo/oli.jpeg" alt="" />
+                <img src="/assets/imgs/equipo/oli.jpeg" alt="" />
             </div>
         </section>
         <div class="container">
-            <img class="img2"src="public/assets/imgs/equipo/nosotras.jpeg" alt="" />
+            <img class="img2"src="/assets/imgs/equipo/nosotras.jpeg" alt="" />
             <div>
                 <h1>¿Quiénes somos?</h1>
                 <p class="description">
