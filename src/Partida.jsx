@@ -81,8 +81,7 @@ export default function Partida() {
     return (
         <>
             <br />
-            <h2>Partida X{gameId}</h2>
-            <div className="yo">Jugador {user}</div>
+            <h2>Partida X{gameId}: jugador {user}</h2>
             <h4>Elige un territorio para comenzar a atacar</h4>
 
             <div class="parent">
