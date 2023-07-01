@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 import { AuthContext } from "./auth/AuthContext";
 import './UnirseJuego.css';
@@ -6,11 +6,20 @@ import { useNavigate } from 'react-router-dom';
 
 export default function UnirseJuego() {
     const navigate = useNavigate();
-    const { user, gameId, setGameId, logout, players, setPlayers, armyInfo, setArmyinfo } = useContext(AuthContext);
+    const { user, setUser, gameId, setGameId, logout, players, setPlayers, armyInfo, setArmyinfo } = useContext(AuthContext);
     const handleLogout = () => {
         logout();
         navigate('/');
     };
+
+    useEffect(() => {
+        if (typeof user === 'string') {
+            const regex = /[^a-zA-Z0-9]/g;
+            const cleanString = user.replace(regex, "");
+            console.log("El nombre de usuario es:", cleanString);
+            setUser(cleanString);
+        }
+    }, [user]);
     const rollDice = () => {
         console.log("user: ", user);
         console.log("gameId PRIMERO: ", gameId);
