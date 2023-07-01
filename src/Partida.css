@@ -411,7 +411,4 @@ h4 {
   color: #0fc9f1;
   font-weight: bold;
   display: inline-block;
-  /* Muestra los elementos en línea uno al lado del otro */
-  margin-right: 70px;
-  /* Espacio entre los jugadores (puedes ajustarlo según tu preferencia) */
 }
