@@ -6,14 +6,6 @@ import { AuthContext } from './auth/AuthContext';
 
 export default function NavBar() {
     const { user, gameId, setUser } = useContext(AuthContext);
-    useEffect(() => {
-        if (typeof user === 'string') {
-            const regex = /[^a-zA-Z0-9]/g;
-            const cleanString = user.replace(regex, "");
-            console.log("El nombre de usuario es:", cleanString);
-            setUser(cleanString);
-        }
-    }, [user]);
     return (
         <>
             <div className="topnav">
