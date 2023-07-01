@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  /* Elimina el margen predeterminado del cuerpo */
+}
+
+.topnav {
+  background-color: #032f40;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 25px;
+}
+
+.topnav a:last-child {
+  margin-right: 0;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  /* Agrega un margen derecho de 10px */
+}
+
+.logo {
+  margin-right: 3px;
+  margin-top: 0px;
+  height: 40px;
+  width: auto;
+}
+
+.expelliarmus {
+  margin-top: 0px;
+  height: 20px;
+  width: auto;
+}
+
+.right-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.right-links a {
+  margin-left: 8px;
+}
+
+.right-links a:last-child {
+  margin-right: 0;
+}
+
+.topnav a.hover-link:hover {
+  background-color: #fff;
+  color: #000;
+} 
