@@ -208,7 +208,7 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
           <img className="ejercito-azul" src="/assets/imgs/fichas/azul.png" alt="Ejército Azul" />
         </div>
         <div className="jugador-container">
-          <div className="yo">Jugador 4</div>
+          <div className="jugador">Jugador 4</div>
           <img className="ejercito-gris" src="/assets/imgs/fichas/gris.png" alt="Ejército Gris" />
         </div>
       </div>
