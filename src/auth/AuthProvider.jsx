@@ -16,7 +16,6 @@ function AuthProvider({ children }) {
     });
     const [attacks, setAttacks] = useState(localStorage.getItem('attacks') || 0);
     const [gameTurn, setGameTurn] = useState(localStorage.getItem('gameTurn') || 1);
-    const [color, setColor] = useState(localStorage.getItem('color') || null);
 
     function logout() {
         setToken(null);
@@ -28,7 +27,6 @@ function AuthProvider({ children }) {
         setDatosterritory(null);
         setWinner(null);
         setAttacks(0);
-        setColor(null);
         console.log("Se hizo logout");
     }
 
@@ -79,14 +77,10 @@ function AuthProvider({ children }) {
     useEffect(() => {
         localStorage.setItem('gameTurn', JSON.stringify(gameTurn));
     }, [gameTurn]);
-
-    useEffect(() => {
-        localStorage.setItem('color', JSON.stringify(color));
-    }, [color]);
       
       
     return (
-        <AuthContext.Provider value={{ token, setToken, logout, user, setUser, gameId, setGameId, players, setPlayers, territoryId, setTerritoryId, numterritories, setNumterritories, datosterritory, setDatosterritory, winner, setWinner, armyInfo, setArmyinfo, attacks, setAttacks, gameTurn, setGameTurn, color, setColor }}>
+        <AuthContext.Provider value={{ token, setToken, logout, user, setUser, gameId, setGameId, players, setPlayers, territoryId, setTerritoryId, numterritories, setNumterritories, datosterritory, setDatosterritory, winner, setWinner, armyInfo, setArmyinfo, attacks, setAttacks, gameTurn, setGameTurn }}>
             {children}
         </AuthContext.Provider>
     );

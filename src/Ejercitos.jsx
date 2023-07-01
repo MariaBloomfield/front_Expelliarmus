@@ -8,7 +8,7 @@ import Partida from './Partida';
 import { useNavigate } from 'react-router-dom';
 
 const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
-  const { gameId, user, territoryId, setTerritoryId, armyInfo, setArmyinfo, gameTurn, setGameTurn, color, setColor } = useContext(AuthContext);
+  const { gameId, user, territoryId, setTerritoryId, armyInfo, setArmyinfo, gameTurn, setGameTurn } = useContext(AuthContext);
   const [territories, setTerritories] = useState({});
 
   const [ejercitosPosiciones, setEjercitosPosiciones] = useState({
@@ -64,16 +64,6 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
         setGameTurn(turno);
     }
   }, [gameTurn]);
-
-  useEffect(() => {
-    if (typeof color === 'string') {
-        const regex = /[\\"\\\\]+/g;
-        const cleanString = color.replace(regex, "");
-        const numero = parseInt(cleanString, 10);
-        console.log("El valor de gameId es:", numero);
-        setColor(numero);
-    }
-}, [color]);
 
   if (armyInfo === 'hola') {
     useEffect(() => {
@@ -162,8 +152,6 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
             const data = response.data;
             const territorio = data.id;
             const turno = data.turno;
-            const color = data.color;
-            setColor(color);
             console.log(data);
             console.log("el juego esta en el turno: ", gameTurn);
             console.log("el turno del jugador es: ", turno);
@@ -220,8 +208,8 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
           <img className="ejercito-azul" src="/assets/imgs/fichas/azul.png" alt="Ejército Azul" />
         </div>
         <div className="jugador-container">
-          <div className="yo">Jugador 4 ({color})</div>
-          <img className="ejercito-gris" src={`/assets/imgs/fichas/${color}.png`} alt="Ejército Gris" />
+          <div className="yo">Jugador 4</div>
+          <img className="ejercito-gris" src="/assets/imgs/fichas/gris.png" alt="Ejército Gris" />
         </div>
       </div>
     </div>
