@@ -28,6 +28,7 @@ function AuthProvider({ children }) {
         setDatosterritory(null);
         setWinner(null);
         setAttacks(0);
+        setColor(null);
         console.log("Se hizo logout");
     }
 

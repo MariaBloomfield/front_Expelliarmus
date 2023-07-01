@@ -65,6 +65,16 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
     }
   }, [gameTurn]);
 
+  useEffect(() => {
+    if (typeof color === 'string') {
+        const regex = /[\\"\\\\]+/g;
+        const cleanString = color.replace(regex, "");
+        const numero = parseInt(cleanString, 10);
+        console.log("El valor de gameId es:", numero);
+        setColor(numero);
+    }
+}, [color]);
+
   if (armyInfo === 'hola') {
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_BACKEND_URL}/territories/${gameId}`)
