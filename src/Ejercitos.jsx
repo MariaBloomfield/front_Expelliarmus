@@ -8,7 +8,7 @@ import Partida from './Partida';
 import { useNavigate } from 'react-router-dom';
 
 const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
-  const { gameId, user, territoryId, setTerritoryId, armyInfo, setArmyinfo, gameTurn, setGameTurn } = useContext(AuthContext);
+  const { gameId, user, territoryId, setTerritoryId, armyInfo, setArmyinfo, gameTurn, setGameTurn, color, setColor } = useContext(AuthContext);
   const [territories, setTerritories] = useState({});
 
   const [ejercitosPosiciones, setEjercitosPosiciones] = useState({
@@ -152,6 +152,8 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
             const data = response.data;
             const territorio = data.id;
             const turno = data.turno;
+            const color = data.color;
+            setColor(color);
             console.log(data);
             console.log("el juego esta en el turno: ", gameTurn);
             console.log("el turno del jugador es: ", turno);
@@ -209,7 +211,7 @@ const Ejercitos = ({ territorioConquistado,  handleClickTerritorio }) => {
         </div>
         <div className="jugador-container">
           <div className="yo">Jugador 4 ({user})</div>
-          <img className="ejercito-gris" src="/assets/imgs/fichas/gris.png" alt="Ejército Gris" />
+          <img className="ejercito-gris" src={`/assets/imgs/fichas/${color}.png`} alt="Ejército Gris" />
         </div>
       </div>
     </div>

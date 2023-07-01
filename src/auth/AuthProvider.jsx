@@ -10,14 +10,13 @@ function AuthProvider({ children }) {
     const [numterritories, setNumterritories] = useState(localStorage.getItem('numterritories') || 10);
     const [datosterritory, setDatosterritory] = useState(localStorage.getItem('datosterritory') || null);
     const [winner, setWinner] = useState(localStorage.getItem('winner') || null);
-    // const [armyInfo, setArmyinfo] = useState(localStorage.getItem('armyInfo') || null);
-    // const [armyInfo, setArmyinfo] = useState(JSON.parse(localStorage.getItem('armyInfo')) || null);
     const [armyInfo, setArmyinfo] = useState(() => {
         const storedArmyInfo = localStorage.getItem('armyInfo');
         return storedArmyInfo !== null ? JSON.parse(storedArmyInfo) : null;
     });
     const [attacks, setAttacks] = useState(localStorage.getItem('attacks') || 0);
     const [gameTurn, setGameTurn] = useState(localStorage.getItem('gameTurn') || 1);
+    const [color, setColor] = useState(localStorage.getItem('color') || null);
 
     function logout() {
         setToken(null);
@@ -79,10 +78,14 @@ function AuthProvider({ children }) {
     useEffect(() => {
         localStorage.setItem('gameTurn', JSON.stringify(gameTurn));
     }, [gameTurn]);
+
+    useEffect(() => {
+        localStorage.setItem('color', JSON.stringify(color));
+    }, [color]);
       
       
     return (
-        <AuthContext.Provider value={{ token, setToken, logout, user, setUser, gameId, setGameId, players, setPlayers, territoryId, setTerritoryId, numterritories, setNumterritories, datosterritory, setDatosterritory, winner, setWinner, armyInfo, setArmyinfo, attacks, setAttacks, gameTurn, setGameTurn }}>
+        <AuthContext.Provider value={{ token, setToken, logout, user, setUser, gameId, setGameId, players, setPlayers, territoryId, setTerritoryId, numterritories, setNumterritories, datosterritory, setDatosterritory, winner, setWinner, armyInfo, setArmyinfo, attacks, setAttacks, gameTurn, setGameTurn, color, setColor }}>
             {children}
         </AuthContext.Provider>
     );
